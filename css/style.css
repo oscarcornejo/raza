@@ -1,0 +1,402 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  /* font-family: "Open Sans", sans-serif;*/
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+  background-color: #363636;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+@media only screen and (min-width: 1050px) {
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+a {
+  color: #267481;
+  text-decoration: none;
+}
+
+.logo-raza a{
+  width: 10%;
+  height: 211px;
+  display: block;
+  margin: 0 auto;
+  top: 400px;
+  position: relative;
+  background: url(../img/logo-radio-raza.png) no-repeat;
+}
+
+.contacto{
+  width: 100%;
+  height: 720px !important;
+  padding-top: 150px;
+}
+
+.contacto h2{
+  padding: 25px 25px 25px;
+  margin-top: 80px;
+  line-height: 122%;
+  font-size: 3.4rem !important;
+  font-weight: 400 !important;
+}
+
+.contacto p{
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.separador-contacto{
+  width: 70%;
+  height: 6px;
+  border: 0;
+  margin: 0 auto;
+  padding-bottom: 35px;
+  background: url(../img/separador.png) no-repeat;
+}
+
+.datos-contacto{
+  width: 24%;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  left: 25%;
+  position: relative;
+}
+
+.logo-raza-footer a{
+     width: 6%;
+    height: 101px;
+    display: block;
+    margin: 0 auto;
+    top: 40px;
+    left: 45px;
+    position: absolute;
+    background: url(../img/logo-radio-raza-contacto.png) no-repeat;
+}
+
+a.estilo-contacto{
+  color: #fff;
+  text-decoration: none;
+}
+
+a.estilo-contacto:hover{
+  color: #888;
+  text-decoration: underline;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+
+
+@media only screen and (min-width: 1050px) {
+  body[data-hijacking="on"] {
+    overflow: hidden;
+  }
+}
+
+.cd-section {
+  height: 100vh;
+}
+.cd-section h2 {
+  /*line-height: 100vh;*/
+  text-align: center;
+  font-size: 2.4rem;
+}
+/*.cd-section:first-of-type > div {
+  background-color: #363636;
+  }*/
+  .cd-section:first-of-type > div::before {
+    /* alert -> all scrolling effects are not visible on small devices */
+    /*content: 'Effects not visible on mobile!';*/
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20px;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #6a7083;
+  }
+  .cd-section:nth-of-type(2) > div {
+    background-color: #2e5367;
+  }
+  .cd-section:nth-of-type(3) > div {
+    background-color: #267481;
+  }
+  .cd-section:nth-of-type(4) > div {
+    background-color: #fcb052;
+  }
+  .cd-section:nth-of-type(5) > div {
+    background-color: #f06a59;
+  }
+  [data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  [data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
+    background-image: url("../img/img-1.jpg");
+  }
+  [data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
+    background-image: url("../img/bg-radio-raza-contacto.png");
+  }
+  [data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
+    background-image: url("../img/img-3.jpg");
+  }
+  [data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
+    background-image: url("../img/img-4.jpg");
+  }
+  [data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
+    background-image: url("../img/img-5.jpg");
+  }
+  @media only screen and (min-width: 1050px) {
+    .cd-section h2 {
+      font-size: 4rem;
+      font-weight: 300;
+    }
+    [data-hijacking="on"] .cd-section {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    [data-hijacking="on"] .cd-section > div {
+      visibility: visible;
+    }
+    [data-hijacking="off"] .cd-section > div {
+      opacity: 0;
+    }
+    [data-animation="rotate"] .cd-section {
+      /* enable a 3D-space for children elements */
+      -webkit-perspective: 1800px;
+      -moz-perspective: 1800px;
+      perspective: 1800px;
+    }
+    [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
+      -webkit-perspective-origin: center 0;
+      -moz-perspective-origin: center 0;
+      perspective-origin: center 0;
+    }
+    [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
+      box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
+    }
+    [data-animation="opacity"] .cd-section.visible > div {
+      z-index: 1;
+    }
+  }
+
+  @media only screen and (min-width: 1050px) {
+    .cd-section:first-of-type > div::before {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 1050px) {
+    .cd-section > div {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      /* Force Hardware Acceleration */
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    [data-hijacking="on"] .cd-section > div {
+      position: absolute;
+    }
+    [data-animation="rotate"] .cd-section > div {
+      -webkit-transform-origin: center bottom;
+      -moz-transform-origin: center bottom;
+      -ms-transform-origin: center bottom;
+      -o-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+  }
+
+
+  .cd-vertical-nav {
+    /* lateral navigation */
+    position: fixed;
+    z-index: 1;
+    right: 3%;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: none;
+  }
+  .cd-vertical-nav a {
+    display: block;
+    height: 40px;
+    width: 40px;
+    /* image replace */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+
+  }
+  .cd-vertical-nav a.cd-prev {
+    background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+
+    top: -240px;
+    position: relative;
+  }
+  .cd-vertical-nav a.cd-next {
+    background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    margin-bottom: 10px;
+
+    top: -290px;
+    position: relative;
+  }
+
+  .cd-vertical-nav a.inactive {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+    -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+    transition: opacity 0.8s 0s, visibility 0s 0.8s;
+  }
+  @media only screen and (min-width: 1050px) {
+    .cd-vertical-nav {
+      display: block;
+    }
+  }
+
+  @media(min-width: 330px){
+
+    .logo-raza a{
+      width: 45%;
+      height: 211px;
+      top: -270px;
+      position: relative;
+      margin: 0 auto;
+      background: url(../img/logo-radio-raza.png) no-repeat;
+    }
+
+
+    .contacto h2 {
+
+      margin-top: 30px;
+
+    }
+
+    .contacto p{
+      width: 76%;
+    }
+
+    .datos-contacto{
+      width: 50%;
+      display: block;
+      left: 0%;
+      margin-bottom: 22px;
+    }
+
+    .logo-raza-footer a{
+      background: none;
+  }
+
+
+  }
+
+@media(min-width: 760px){
+  .logo-raza a {
+      width: 17%;
+    }
+
+  .logo-raza-footer a{
+     width: 6%;
+    height: 101px;
+    display: block;
+    margin: 0 auto;
+    top: 40px;
+    left: 45px;
+    position: absolute;
+    background: url(../img/logo-radio-raza-contacto.png) no-repeat;
+}
+
+}
+
+@media(min-width: 1280px){
+
+.logo-raza a{
+  width: 10%;
+  height: 211px;
+  display: block;
+  margin: 0 auto;
+  top: 400px;
+  position: relative;
+  background: url(../img/logo-radio-raza.png) no-repeat;
+}
+
+   .datos-contacto{
+  width: 24%;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  left: 25%;
+  position: relative;
+}
+
+.logo-raza-footer a{
+     width: 6%;
+    height: 101px;
+    display: block;
+    margin: 0 auto;
+    top: 40px;
+    left: 45px;
+    position: absolute;
+    background: url(../img/logo-radio-raza-contacto.png) no-repeat;
+}
+
+
+  }
+
+
+

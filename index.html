@@ -1,0 +1,131 @@
+<!Doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Raza.fm</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'> -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+
+  <!-- Slider Pro -->
+  <link rel="stylesheet" href="css/slider-pro.css"/>
+
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+  
+</head>
+<!-- hijacking: on/off - animation: none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax -->
+<body data-hijacking="on" data-animation="parallax">
+
+  <section class="cd-section visible">
+
+    <div class="slider-pro" id="my-slider">
+      <div class="sp-slides">
+        <!-- Slide 1 -->
+        <div class="sp-slide">
+
+          <h2 class="sp-layer">Texto de prueba para un manifiesto #1</h2>
+
+          <img class="sp-image" src="img/slide-1.png"/>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="sp-slide">
+          <h2 class="sp-layer">Texto de prueba para un manifiesto #2</h2>
+
+          <img class="sp-image" src="img/slide-2.png"/>
+
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="sp-slide">
+          <h2 class="sp-layer">Texto de prueba para un manifiesto #3</h2>
+
+          <img class="sp-image" src="img/slide-3.png"/>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="sp-slide">
+          <h2 class="sp-layer">Texto de prueba para un manifiesto #4</h2>
+
+          <img class="sp-image" src="img/slide-4.png"/>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="logo-raza">
+      <a href="" class="cd-prev inactive"></a>
+    </div>
+
+  </section>
+
+  <section class="cd-section">
+
+    <div class="contacto">
+      <h2>¿Tienes una Banda? <br>Contáctanos, haremos que tu música se difunda.</h2>
+
+      <hr class="separador-contacto">
+
+      <p class="text-contacto">Lectus porta elementum a in elementum. Mid facilisis! Sociis, cras nec! Integer, a, platea, cum enim! Tortor. Magnis est elementum? Tempor. Auctor nunc, non! Risus pulvinar nascetur! Eu phasellus purus..</p>
+
+      <h4 class="datos-contacto"><i class="fa fa-phone"></i> (+56 9) 8983 5139</h4>
+
+      <h4 class="datos-contacto">
+        <i class="fa fa-paper-plane-o"></i> 
+        <a href="mailto:hola@raza.fm" class="estilo-contacto">hola@raza.fm</a>
+      </h4>
+
+      <!-- <i class="fa fa-envelope-o"></i> -->
+
+      <div class="logo-raza-footer">
+        <a href="" class="cd-prev inactive"></a>
+      </div>
+
+    </div>
+
+  </section>
+
+  
+  <nav>
+    <ul class="cd-vertical-nav">
+      <li><a href="#0" class="cd-prev inactive">Next</a></li>
+      <li><a href="#0" class="cd-next">Prev</a></li>
+    </ul>
+  </nav> <!-- .cd-vertical-nav -->
+  
+
+
+  <script src="js/jquery-2.1.4.js"></script>
+  <script src="js/velocity.min.js"></script>
+  <script src="js/velocity.ui.min.js"></script>
+  <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.sliderPro.js"></script>
+
+  <script type="text/javascript">
+    $( document ).ready(function( $ ) {
+      $( '#my-slider' ).sliderPro({
+        width: '100%',
+        height: 661,
+        arrows: false,
+        buttons: false,
+        fade: true
+      });
+    });
+  </script>
+
+</body>
+</html>
