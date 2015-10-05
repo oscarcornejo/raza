@@ -121,7 +121,7 @@ Main Components
 }
 
 .cd-section {
-  height: 100vh;
+  height: 100vh !important;
 }
 .cd-section h2 {
   /*line-height: 100vh;*/
@@ -312,7 +312,7 @@ Main Components
   @media(min-width: 330px){
 
     .logo-raza a{
-      width: 45%;
+      width: 32%;
       height: 211px;
       top: -270px;
       position: relative;
@@ -393,6 +393,10 @@ Main Components
     left: 45px;
     position: absolute;
     background: url(../img/logo-radio-raza-contacto.png) no-repeat;
+}
+
+.contacto h2 {
+    margin-top: 120px;
 }
 
 
